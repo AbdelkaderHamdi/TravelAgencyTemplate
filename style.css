@@ -1,0 +1,344 @@
+/* Variables des couleurs */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #E74C3C;
+    --accent-color: #3498DB;
+    --text-light: #FFFFFF;
+    --text-dark: #2C3E50;
+    --overlay-color: rgba(44, 62, 80, 0.7);
+    --background-light: #f8f9fa;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+section{
+    text-align: center;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--background-light);
+    max-width: 1200px;
+
+}
+
+/* Header et Vidéo */
+header {
+    position: relative;
+    min-height: 20vh;
+    overflow: hidden;
+    background-color: var(--primary-color);
+}
+
+.index-header {
+    height: 100vh;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+}
+
+/* Navigation */
+nav {
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-img img {
+    height: 100px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--secondary-color);
+}
+
+/* Contenu du Header */
+.header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 5%;
+    margin-top: 10vh;
+    color: var(--text-light);
+}
+
+h1, h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--primary-color);
+}
+
+.header-content h1 {
+    color: var(--text-light);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #c0392b;
+}
+
+/* Sections principales */
+main {
+    padding: 4rem 5%;
+}
+
+.about {
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--background-light);
+    border-radius: 10px;
+}
+
+/* Section Reviews */
+
+.review-people h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card-review {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-review:hover {
+    transform: translateY(-5px);
+}
+
+.client-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 5px solid var(--accent-color);
+    object-fit: cover;
+}
+
+.client-review {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin: 1.5rem 0;
+}
+
+.client-stars {
+    margin-top: 1.5rem;
+    width: 120px;
+}
+.q-a details{
+    margin-bottom: 1.5rem;
+}
+.q-a summary{
+    cursor: pointer;
+}
+.q-a p{
+    max-width: 800px;
+    margin: 20px auto;
+    font-size:20px;
+    background: #a0a0b5;
+}
+
+/* Galerie */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.img-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-card:hover {
+    transform: scale(1.03);
+}
+
+.img-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Formulaire de contact */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+form button {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    height: 10vh;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card-review {
+        padding: 1.5rem;
+    }
+}
